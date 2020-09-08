@@ -2,14 +2,14 @@
 title: '【数据结构与算法JavaScript实现】栈'
 date: 2019-01-03
 author: Li Hao
-hero: './cover.jpg'
+hero: './images/cover.jpg'
 ---
 
 # 栈(stack)
 
 栈是一种遵循<b>后进先出（LIFO）</b>原则的有序集合。新添加或待删除的元素都保存在栈的同一端，称作栈顶，另一端就叫做栈底。在栈里，新元素都靠近栈顶，旧元素都靠近栈底。
 
-![栈结构示意图](./stack-constructor.png)
+![栈结构示意图](./images/stack-constructor.png)
 
 ## 分步实现
 
@@ -38,7 +38,7 @@ let items = [];
 - clear(): 移除栈中的所有元素。
 - size(): 返回栈里的元素个数。
 
-![栈操作示意图](./stack-operations.png)
+![栈操作示意图](./images/stack-operations.png)
 
 ### 给栈添加元素
 
