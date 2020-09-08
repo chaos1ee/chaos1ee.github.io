@@ -1,8 +1,8 @@
 ---
-title: '【数据结构与算法JavaScript实现】栈'
-date: 2019-01-03
+title: 【数据结构与算法JS实现】栈
 author: Li Hao
-hero: './images/cover.jpg'
+date: 2019-01-03T00:00:00.000Z
+hero: ./images/cover.jpg
 ---
 
 # 栈(stack)
