@@ -3,7 +3,7 @@ title: 【译】讲解Angular变更检测
 author: Li Hao
 date: '2020-09-09'
 excerpt: 讲解Angular变更检测原理，以及优化变更检测
-hero: images/beach-1246835_1280.jpg
+hero: images/marrakech-4500910_1280.jpg
 ---
 > 作者：[PascalPrecht](https://twitter.com/PascalPrecht)
 >
