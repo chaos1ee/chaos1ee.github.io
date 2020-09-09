@@ -1,12 +1,12 @@
 module.exports = {
   pathPrefix: '/',
   siteMetadata: {
-    title: `Li Hao Blog`,
+    title: `Chaos Blog`,
     name: `Li Hao`,
     siteUrl: `https://chaos1ee.github.io`,
     description: `This is a personal blog be used to record life and code.`,
     hero: {
-      heading: `Li Hao Blog`,
+      heading: `A gentleman should always mean what he says.`,
       maxWidth: 680,
     },
     social: [
