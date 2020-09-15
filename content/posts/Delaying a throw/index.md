@@ -30,7 +30,6 @@ source.subscribe(
     console.error(err);
   }
 );
-
 ```
 
 ### 操作符
