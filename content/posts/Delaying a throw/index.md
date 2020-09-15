@@ -2,6 +2,7 @@
 title: Delaying a throw
 author: Li Hao
 date: '2020-02-11'
+excerpt: 在rxjs中延迟抛出错误
 hero: ./images/cover.jpg
 ---
 ### 问题
