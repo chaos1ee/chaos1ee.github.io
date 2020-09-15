@@ -1,8 +1,8 @@
 ---
 title: 利用ssh穿越多层跳板机
-date: 2019-01-03
 author: Li Hao
-hero: './images/cover.jpg'
+date: 2019-01-03T00:00:00.000Z
+hero: ./images/cover.jpg
 ---
 
 **1. client 直接穿越多层跳板机**
