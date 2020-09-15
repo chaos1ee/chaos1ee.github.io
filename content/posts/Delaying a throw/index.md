@@ -1,13 +1,12 @@
 ---
 title: Delaying a throw
-date: 2019-03-14 17:14:06
 author: Li Hao
-hero: './images/cover.jpg'
+date: 2019-03-14T17:14:06.000Z
+hero: ./images/cover.jpg
 ---
-
 ### 问题
 
-不能直接使用 delay、delayWhen 操作符，因为直接抛出的错误会被 catchError 操作符或 error callback catch 到，从而跳过延迟操作符。
+使用Observable数据时，不能直接使用 delay、delayWhen 操作符延迟抛出错误，因为直接抛出的错误会被 catchError 操作符或 error callback catch 到，从而跳过延迟操作符。
 
 ### 解决方式
 
@@ -33,8 +32,7 @@ materialize 把 next、error、complete 转化为 Observable Notification 对象
 
 ### 参考
 
-1. https://github.com/Reactive-Extensions/RxJS/issues/648
-
-2. materialize https://rxjs-dev.firebaseapp.com/api/operators/materialize
-3. dematerialize https://rxjs-dev.firebaseapp.com/api/operators/dematerialize
-4. Notification https://rxjs-dev.firebaseapp.com/api/index/class/Notification
+1. github issue: https://github.com/Reactive-Extensions/RxJS/issues/648
+2. materialize operator: https://rxjs-dev.firebaseapp.com/api/operators/materialize
+3. dematerialize operator: https://rxjs-dev.firebaseapp.com/api/operators/dematerialize
+4. Notification class: https://rxjs-dev.firebaseapp.com/api/index/class/Notification
