@@ -6,18 +6,30 @@ hero: ./images/cover.jpg
 ---
 ### 问题
 
-使用Observable数据时，不能直接使用 delay、delayWhen 操作符延迟抛出错误，因为直接抛出的错误会被 catchError 操作符或 error callback catch 到，从而跳过延迟操作符。
+使用Observable数据时，不能直接使用 delay、delayWhen等操作符延迟抛出错误，因为直接抛出的错误会被 catchError 操作符或 error callback catch 到，从而跳过延迟操作符。
 
 ### 解决方式
 
 伪代码
 
-```js
-const source = throwError('test')
-  .materialize()
-  .delay(1000)
+```javascript
+import { throwError } from "rxjs";
+import { materialize, dematerialize, delay } from "rxjs/operators";
+
+const source = throwError(new Error("test")).pipe(
+  materialize(),
+  delay(2000),
   //Somewhere later
-  .dematerialize();
+  dematerialize()
+);
+
+source.subscribe(
+  () => {},
+  err => {
+    console.error(err);
+  }
+);
+
 ```
 
 ### 操作符
