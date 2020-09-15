@@ -1,8 +1,8 @@
 ---
 title: 在Chrome绕开证书问题访问网页
-date: 2019-11-06 11:30:27
 author: Li Hao
-hero: './images/cover.jpg'
+date: '2019-12-30'
+hero: ./images/cover.jpg
 ---
 
 当我们在 chrome 上访问网页遇到证书问题的时候一般可以通过两种方式解决。
