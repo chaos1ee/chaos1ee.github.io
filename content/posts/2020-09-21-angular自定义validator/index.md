@@ -86,5 +86,10 @@ export class TdsqlAccountDuplicateDirective implements AsyncValidator {
     );
   }
 }
-
 ```
+
+参考：
+
+1. https://angular.io/api/forms/AsyncValidator
+
+2. https://medium.com/grano/using-custom-async-validators-with-angular-b85a9fe9e298
