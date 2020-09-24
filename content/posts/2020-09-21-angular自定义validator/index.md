@@ -1,5 +1,5 @@
 ---
-title: Angular自定义Validator
+title: 在Angular中自定义Validator
 author: Li Hao
 date: '2020-09-21'
 excerpt: 在Angular中以指令的方式自定义同步和异步Validators
