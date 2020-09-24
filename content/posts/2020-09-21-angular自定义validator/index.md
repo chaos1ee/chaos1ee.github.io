@@ -5,24 +5,17 @@ date: '2020-09-21'
 excerpt: 在Angular中以指令的方式自定义同步和异步Validators
 hero: images/potter-4682257_1280.jpg
 ---
+在angular中给表单校验的方式有多种：
+
+- 指令的方式，继承Validator、AsyncValidator类
+- 定义Validator的衍生类，为该类定义新的校验方法
+- 给FormBuilder传递ValidatorFn类型的参数
+
+今天我们来介绍一下`指令的方式`实现表单校验。
+
+## 同步的表单校验器
+
 ```typescript
-import { K8sApiService, matchLabelsToString } from '@alauda/common-snippet';
-import { Directive, Input, forwardRef } from '@angular/core';
-import {
-  AbstractControl,
-  AsyncValidator,
-  NG_ASYNC_VALIDATORS,
-  NG_VALIDATORS,
-  ValidationErrors,
-  Validator,
-} from '@angular/forms';
-import { Observable, of, timer } from 'rxjs';
-import { catchError, first, map, switchMap } from 'rxjs/operators';
-
-import { RESOURCE_TYPES } from 'app/typings';
-
-import { TdsqlAccount } from '../../types';
-
 @Directive({
   selector: '[rcAccountPattern][formControlName],[rcAccountPattern][ngModel]',
   providers: [
@@ -48,6 +41,11 @@ export class TdsqlAccountPatternDirective implements Validator {
   }
 }
 
+```
+
+## 异步的表单校验器
+
+```typescript
 @Directive({
   selector:
     '[rcAccountDuplicate][formControlName],[rcAccountDuplicate][ngModel]',
@@ -91,5 +89,4 @@ export class TdsqlAccountDuplicateDirective implements AsyncValidator {
 参考：
 
 1. https://angular.io/api/forms/AsyncValidator
-
 2. https://medium.com/grano/using-custom-async-validators-with-angular-b85a9fe9e298
