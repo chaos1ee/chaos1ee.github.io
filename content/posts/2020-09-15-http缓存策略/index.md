@@ -19,7 +19,7 @@ HTTP 协议以 ASCII 码传输，分为三部分：状态行、请求头和消�
 
 GET、POST、UPDATE、DELETE、PATCH 等。
 
-> **Note**
+> [Warning]
 >
 > GET 请求的 URL 有长度限制，但是 HTTP 协议并没有如此规定，而是浏览器对 GET 请求的限制。
 
@@ -80,11 +80,7 @@ post 提交的
 
 #### **304 Not Modified**
 
-该状态码表示客户端发送附带条件的请求[^3]时，服务器端允许请求访问资源，但未满足条件的情况。
-
-> **Note**
->
-> 附带条件的请求是指采用 GET 方法的请求报文中包含 If-Match，If-Modified- Since，If-None-Match，If-Range，If-Unmodified-Since 中任一首部。
+该状态码表示客户端发送附带条件的请求[^4]时，服务器端允许请求访问资源，但未满足条件的情况。
 
 #### **400 Bad Request**
 
@@ -113,4 +109,5 @@ post 提交的
 
 [^1]: 无连接是指每次连接只能处理一个请求，不可以重复使用
 [^2]: 无状态是指协议对于事物处理没有记忆能力，不会记录任何的状态
-[^3]: 附带条件的请求是指采用GET方法的请求报文中包含If-Match，If-Modified-SinceIf-None-Match，If-Range，If-Unmodified-Since中任一首部
+[^3]: 无状态是指协议对于事物处理没有记忆能力，不会记录任何的状态
+[^4]: 附带条件的请求是指采用GET方法的请求报文中包含If-Match，If-Modified-SinceIf-None-Match，If-Range，If-Unmodified-Since中任一首部
