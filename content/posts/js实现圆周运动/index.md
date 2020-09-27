@@ -1,16 +1,65 @@
 ---
-title: js实现圆周运动
-date: 2018-06-11
+title: 实现圆周运动
 author: Li Hao
-hero: './images/cover.jpg'
+date: 2018-06-11T00:00:00.000Z
+hero: ./images/cover.jpg
 ---
+## CSS的方式
+html
+```html
+<div class="wrapper">
+    <div class="box">
+        <div class="ball"></div>
+    </div>
+</div>
+```
 
-一年前去深圳面试遇到的一道面试题——写一段小球做圆周运动的动画。当时我想了两种思路：
+css
+```css
+html, body {
+  margin: 0;
+  padding: 0;
+}
 
-- CSS 动画；
-- 定位配合 js 控制 DOM 元素的位置。
+.wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
-现在回想起来，决定重新认真实现一番（js 实现）。正好一直在学习设计模式，那就给自己的代码润润色吧。“Let the code say”。 直接上代码，拷贝可预览效果。
+@keyframes round {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.box {
+  width: 200px;
+  height: 200px;
+  border: 1px solid blue;
+  border-radius: 50%;
+  animation: round 4s linear infinite;
+}
+
+
+.ball {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: red;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+```
+
+## JS的方式
 
 ![圆周运动动画](./images/animation.gif)
 
