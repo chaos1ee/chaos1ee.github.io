@@ -1,5 +1,5 @@
 ---
-title: SSL/TLS握手与CA证书
+title: SSL加密解密过程
 author: Li Hao
 date: '2020-09-27'
 excerpt: HTTPS加密解密
@@ -75,7 +75,4 @@ SSL/TLS 协议是为了解决这三大风险而设计的，它希望达到的目
 ## **参考文献**
 
 1. Transport Layer Security <https://en.wikipedia.org/wiki/Transport_Layer_Security>
-2. SSL/TLS 握手过程详解 [https://www.jianshu.com/p/7158568e4867](https://www.jianshu.com/p/7158568e4867 "https\://www.jianshu.com/p/7158568e4867")
-3. SSL/TLS 协议运行机制的概述 [http://www.ruanyifeng.com/blog/2014/02/ssl_tls.html](http://www.ruanyifeng.com/blog/2014/02/ssl_tls.html "http\://www.ruanyifeng.com/blog/2014/02/ssl_tls.html")
-4. ssl 是如何加密传输的数据的 [https://evergreen-tree.github.io/articles/2016-05/daily-ssl-rsa-des-algorithm](https://evergreen-tree.github.io/articles/2016-05/daily-ssl-rsa-des-algorithm "https\://evergreen-tree.github.io/articles/2016-05/daily-ssl-rsa-des-algorithm")
-5. 扫盲 HTTPS 和 SSL/TLS 协议：可靠秘钥交换的原理 [https://segmentfault.com/a/1190000002927971](https://segmentfault.com/a/1190000002927971 "https\://segmentfault.com/a/1190000002927971")
+2. SSL/TLS 协议运行机制的概述 [http://www.ruanyifeng.com/blog/2014/02/ssl_tls.html](http://www.ruanyifeng.com/blog/2014/02/ssl_tls.html "http\://www.ruanyifeng.com/blog/2014/02/ssl_tls.html")
