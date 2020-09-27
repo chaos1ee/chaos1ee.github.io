@@ -9,7 +9,7 @@ hero: images/dog-5288071_1280.jpg
 
 ### 什么是 HTTP
 
-HTTP（Hypertext Transfer Protocol），它是构建于 TCP/IP 协议的应用层协议，默认端口号 80，且是无连接[^1](无连接是指每次连接只能处理一个请求，不可以重复使用)无状态[^2](无状态是指协议对于事物处理没有记忆能力，不会记录任何的状态)的。
+HTTP（Hypertext Transfer Protocol），它是构建于 TCP/IP 协议的应用层协议，默认端口号 80，且是无连接[^1]无状态[^2]的。
 
 ### HTTP 报文构成
 
@@ -67,7 +67,7 @@ GET、POST、UPDATE、DELETE、PATCH 等。
 
 #### **304 Not Modified**
 
-该状态码表示客户端发送附带条件的请求[^3](附带条件的请求是指采用GET方法的请求报文中包含If-Match，If-Modified-SinceIf-None-Match，If-Range，If-Unmodified-Since中任一首部)时，服务器端允许请求访问资源，但未满足条件的情况。
+该状态码表示客户端发送附带条件的请求[^3]时，服务器端允许请求访问资源，但未满足条件的情况。
 
 #### **400 Bad Request**
 
@@ -125,3 +125,7 @@ HTTPS = HTTP + 加密 + 认证 + 完整性保护
 2. 服务器将证书下发给客户端，客户端使用 CA 的公钥（已经事先植入到浏览器）向 CA 验证证书的数字签名，以确认服务器公钥的正确性；
 3. 客户端生成一个随机数 master secret，随后用服务器公钥加密 master secret 生成 pre-master secret 并传送给服务器；
 4. 服务器使用服务器私钥解密接收到的 pre-master secret，得到 master secret，之后客户端与服务端即可正常通信。
+
+[^1]: 无连接是指每次连接只能处理一个请求，不可以重复使用
+[^2]: 无状态是指协议对于事物处理没有记忆能力，不会记录任何的状态
+[^3]: 附带条件的请求是指采用GET方法的请求报文中包含If-Match，If-Modified-SinceIf-None-Match，If-Range，If-Unmodified-Since中任一首部
