@@ -1,5 +1,5 @@
 ---
-title: SSL/TLS握手与CA证书
+title: HTTPS加密解密过程
 author: Li Hao
 date: '2020-09-27'
 excerpt: HTTPS加密解密
@@ -67,15 +67,16 @@ SSL/TLS 协议是为了解决这三大风险而设计的，它希望达到的目
 
 数字证书加密解密过程如下：
 
+![](images/page156image41022048.jpg)
+
 1. 申请者给CA提交服务器公钥，CA用自己的秘钥对服务器公钥生成数字签名，并给把证书（证书 = 服务器公钥 + CA的数字签名）颁发给申请者；
 2. 服务器将证书下发给客户端，客户端使用CA的公钥（已经事先植入到浏览器）向CA验证证书的数字签名，以确认服务器公钥的正确性；
 3. 客户端生成一个随机数master secret，随后用服务器公钥加密master secret生成pre-master secret并传送给服务器；
 4. 服务器使用服务器私钥解密接收到的pre-master secret，得到master secret，之后客户端与服务端即可正常通信。
 
+
+
 ## **参考文献**
 
 1. Transport Layer Security <https://en.wikipedia.org/wiki/Transport_Layer_Security>
-2. SSL/TLS 握手过程详解 [https://www.jianshu.com/p/7158568e4867](https://www.jianshu.com/p/7158568e4867 "https\://www.jianshu.com/p/7158568e4867")
-3. SSL/TLS 协议运行机制的概述 [http://www.ruanyifeng.com/blog/2014/02/ssl_tls.html](http://www.ruanyifeng.com/blog/2014/02/ssl_tls.html "http\://www.ruanyifeng.com/blog/2014/02/ssl_tls.html")
-4. ssl 是如何加密传输的数据的 [https://evergreen-tree.github.io/articles/2016-05/daily-ssl-rsa-des-algorithm](https://evergreen-tree.github.io/articles/2016-05/daily-ssl-rsa-des-algorithm "https\://evergreen-tree.github.io/articles/2016-05/daily-ssl-rsa-des-algorithm")
-5. 扫盲 HTTPS 和 SSL/TLS 协议：可靠秘钥交换的原理 [https://segmentfault.com/a/1190000002927971](https://segmentfault.com/a/1190000002927971 "https\://segmentfault.com/a/1190000002927971")
+2. SSL/TLS 协议运行机制的概述 [http://www.ruanyifeng.com/blog/2014/02/ssl_tls.html](http://www.ruanyifeng.com/blog/2014/02/ssl_tls.html "http\://www.ruanyifeng.com/blog/2014/02/ssl_tls.html")
