@@ -187,7 +187,7 @@ The default behaviour applied by Chrome is slightly more permissive than an expl
 
 ## 参考
 
-1. Cross-Site Request Forgery Prevention https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html
-2. SameSite cookies explained https://web.dev/samesite-cookies-explained
-3. SameSite cookies https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Headers/Set-Cookie/SameSite
-4. Set-Cookie https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie
+1. [Cross-Site Request Forgery Prevention](https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html)
+2. [SameSite cookies explained](https://web.dev/samesite-cookies-explained)
+3. [SameSite cookies](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Headers/Set-Cookie/SameSite)
+4. [Set-Cookie](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie)
