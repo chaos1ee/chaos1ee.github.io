@@ -35,13 +35,15 @@ action 是可以执行的命令，由它组成了 step。
 
 runner 指安装了 Github Actions runner 应用程序的服务器，它可以托管在 Github 上，也可以托管在自己的服务器上。runner 负责监听、运行 job，且同一时间只能运行一个 job，最后它可以给 Github 汇报执行进度、日志和结果。
 
-接下来我们将借助一个 demo 阐述 Github Actions 的创建方式。
-
 ## 创建自动发布 npm package 的流水线
 
-由于我们需要将包发布到 npm 上，所以可以先登陆 npm 创建一个 access token。npm access token 相关的知识可见 https://docs.npmjs.com/about-access-tokens。我们创建完token后，将其保存到github 项目下的 secret 中以供流水线使用，操作方式可见 https://docs.github.com/en/free-pro-team@latest/actions/reference/encrypted-secrets#creating-encrypted-secrets-for-a-repository 。
+接下来我们将借助一个 demo 阐述 Github Actions 的创建方式。
 
-最后，我们在仓库的"`.github/workflows/"`目录下添加如下的 yaml 文件：
+由于我们需要将包发布到 npm 上，所以可以先登陆 npm 创建一个 access token。npm access token 相关的知识可见 [About access tokens](https://docs.npmjs.com/about-access-tokens) 。
+
+我们创建完token后，将其保存到github 项目下的 secret 中以供流水线使用，操作方式可见 [Creating encrypted secrets for a repository](https://docs.github.com/en/free-pro-team@latest/actions/reference/encrypted-secrets#creating-encrypted-secrets-for-a-repository)。
+
+最后，我们在仓库的`.github/workflows/`目录下添加如下的 yaml 文件：
 
 **publish.yaml**
 
@@ -105,14 +107,16 @@ jobs:
 | **on**              | 可以触发流水线的事件名称。流水线的事件名称可以参照 [Events that trigger workflows](https://docs.github.com/en/free-pro-team@latest/actions/reference/events-that-trigger-workflows#configuring-workflow-events)。 |
 | **jobs**            | 流水线中包含的所有 job 在此定义。                                                                                                                                                                                 |
 | **publish-package** | job 名称。                                                                                                                                                                                                        |
-| **runs-on**         | job 运行的虚拟环境。更多选项可见 https://docs.github.com/en/free-pro-team@latest/actions/reference/workflow-syntax-for-github-actions#jobsjob_idruns-on。                                                         |
+| **runs-on**         | job 运行的虚拟环境。更多选项可见 [Job runs on](https://docs.github.com/en/free-pro-team@latest/actions/reference/workflow-syntax-for-github-actions#jobsjob_idruns-on)。                                                         |
 | **steps**           | job 中执行的所有 step。                                                                                                                                                                                           |
-| **use**             | use 指的是从社区中寻找提供的 action。从 marketplace https://github.com/marketplace?category=free&type=actions 上可以找到一些第三方的 action。                                                                     |
+| **use**             | use 指的是从社区中寻找提供的 action。从 [marketplace](https://github.com/marketplace?category=free&type=actions) 上可以找到一些第三方的 action。                                                                     |
 | **run**             | 在 runner 上运行指定的命令                                                                                                                                                                                        |
 
 还有更多语法可以从 [Workflow syntax for GitHub Actions](https://docs.github.com/en/free-pro-team@latest/actions/reference/workflow-syntax-for-github-actions#jobsjob_idstrategy) 上找到。
 
-最后我们可以在 github 的仓库中执行流水线和查看流水线运行情况（在仓库的“Actions” tab 中）。
+最后我们可以在Github仓库主页的【Actions】中执行流水线和查看流水线运行情况 。
+
+![Github actions](./actions.png)
 
 ## 参考
 

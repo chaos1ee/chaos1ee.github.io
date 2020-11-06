@@ -4,4 +4,4 @@
 
 Li Hao's personal blog that based on `gatsby` and `gatsby-starter-bee` theme, deployed on `Netlify`.
 
-[blog address](https://blog.haoli.life)
+[Blog address](https://blog.haoli.life)

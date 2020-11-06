@@ -1,5 +1,5 @@
 ---
-title: ' CSRF攻防'
+title: 'CSRF攻防'
 date: '2020-11-03'
 category: '安全'
 draft: false

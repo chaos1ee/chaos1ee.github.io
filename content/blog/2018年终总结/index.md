@@ -1,6 +1,7 @@
 ---
 title: 2018年终总结
 date: 2019-01-03
+category: '年终总结'
 draft: false
 ---
 

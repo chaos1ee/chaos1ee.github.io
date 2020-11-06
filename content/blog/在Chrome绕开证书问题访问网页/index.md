@@ -1,6 +1,7 @@
 ---
 title: 在Chrome绕开证书问题访问网页
 date: '2019-12-30'
+category: 'Chrome'
 draft: false
 ---
 
