@@ -14,7 +14,7 @@ draft: false
 > Puppeteer 是一个 Node 库，它通过 DevTools 协议提供了
 > 操作无头（headless）Chrome 或 Chromium 的高级 API。
 
-![puppeteer](./images/puppeteer.png)
+![puppeteer](puppeteer.png)
 
 ## puppeteer 能做什么？
 
@@ -58,7 +58,7 @@ puppeteer 官方仓库提供了完整的[API 文档](https://github.com/GoogleCh
 
 使用浏览器访问 58 同城租房信息首页 [http://gz.58.com/chuzu](http://gz.58.com/chuzu)。可以先打开浏览器的调试工具，观察一下目标页面的文档结构，对网站数据有一个初步的认识。
 
-![58租房首页](./images/58.jpg)
+![58租房首页](58.jpg)
 
 我们要爬取的网站以列表的形式呈现了在租房产的简略信息，点击列表中的图片，可以导航到对应房产的详情页面。
 
@@ -110,7 +110,7 @@ while (result.length > 0) {
 
 1. puppeteer 提供的 page.evaluate API。
 
-![puppeteer context](./images/puppeteer-context.png))
+![puppeteer context](puppeteer-context.png))
 
 从图上可以看出，一个 browser 实例可以对应多个 page，每一个 page 对应一个 frame，在 frame 中存在独立的执行上下文（ExcutionContext）。通过 page.evaluate API，我们可以在页面的上下文中执行代码。在上述的代码中我们就在 page.evaluate 的回调中拿到了页面上下文中的<b>\$</b>变量（jQuery 暴露的变量）。
 

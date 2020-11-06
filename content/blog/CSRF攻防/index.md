@@ -23,7 +23,7 @@ Cross-Site Request Forgery（跨站伪请求）发生在第三方网站，主要
 
 ### Website A
 
-![](images/csrf.png)
+![](csrf.png)
 
 > 线上地址：https://47.94.88.69
 >
@@ -55,7 +55,7 @@ router.get('/get', ctx => {  if(ctx.cookies.get(COOKIE_NAME) === COOKIE_VALUE) {
 
 ### Website B
 
-![](images/csrf_attacker.png)
+![](csrf_attacker.png)
 
 > 线上地址：http://csrf-attacker.surge.sh
 >

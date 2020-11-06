@@ -9,6 +9,8 @@ draft: false
 
 Github Actions 是由 Github 推出的持续集成工具，它可以为开发者提供构建自动化 workflow 的新方式，且它是事件驱动的。
 
+![Overview action](./overview-actions-simple.png)
+
 ## Github Actions 中的一些重要概念
 
 #### workflow

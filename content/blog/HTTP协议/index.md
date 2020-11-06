@@ -117,7 +117,7 @@ GET、POST、UPDATE、DELETE、PATCH 等。
 
 HTTPS = HTTP + 加密 + 认证 + 完整性保护
 
-![http and https](images/page144image41410480.jpg)
+![http and https](page144image41410480.jpg)
 
 ### CA 加密过程
 
